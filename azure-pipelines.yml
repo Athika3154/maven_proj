@@ -7,13 +7,12 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
   name: maven
 
 steps:
 - task: Maven@3
   inputs:
-    mavenPomFile: 'pom.xml'
+    mavenPomFile: 'https://github.com/Athika3154/maven_proj/blob/main/Spring-CRUD-main/pom.xml'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.21'
