@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drink Menu - Coffee Shop</title>
+    <link rel="stylesheet" th:href="@{/drink-menu-others.css}">
+    <link href="https://unpkg.com/lucide-static/font/lucide.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>What would you like to drink today?</h1>
+            <button class="icon-button">
+                <i class="lucide-bell"></i>
+            </button>
+        </header>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" placeholder="Search..">
+        </div>
+
+        <!-- Category Filter -->
+        <div class="category-filter">
+            <a th:href="@{/drink-menu-coffee}" class="category-btn">Coffee</a>
+            <a th:href="@{/drink-menu-choco}" class="category-btn">Chocolate</a>
+            <a th:href="@{/drink-menu-others}" class="category-btn active">Others</a>
+        </div>        
+
+        <!-- Drink List -->
+<div class="drink-list">
+    <div class="drink-item">
+        <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" 
+             alt="Iced Lemonade">
+        <div class="drink-info">
+            <h3>Iced Lemonade</h3>
+            <p class="description">Fresh lemon juice and soda water, served cold</p>
+            <p class="price">Rp 18.000</p>
+        </div>
+        <button class="add-btn">
+            <i class="lucide-plus"></i>
+        </button>
+    </div>
+
+    <div class="drink-item">
+        <img src="https://images.unsplash.com/photo-1560508180-03f285f67ded?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" 
+             alt="Iced Strawberry Lemonade">
+        <div class="drink-info">
+            <h3>Iced Strawberry Lemonade</h3>
+            <p class="description">Iced lemonade with fresh strawberry juice, served cold</p>
+            <p class="price">Rp 18.500</p>
+        </div>
+        <button class="add-btn">
+            <i class="lucide-plus"></i>
+        </button>
+    </div>
+
+    <div class="drink-item">
+        <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" 
+             alt="Iced Orange Lemonade">
+        <div class="drink-info">
+            <h3>Iced Orange Lemonade</h3>
+            <p class="description">Iced lemonade with fresh orange juice, served cold</p>
+            <p class="price">Rp 18.500</p>
+        </div>
+        <button class="add-btn">
+            <i class="lucide-plus"></i>
+        </button>
+    </div>
+
+    <!-- Hot Chocolate Card (moved here) -->
+    <div class="drink-item">
+        <img th:src="@{/images/hot_chocolate.jpg}" alt="Hot Chocolate">
+        <div class="drink-info">
+            <h3>Hot Chocolate</h3>
+            <p class="description">Rich cocoa blended with steamed milk,</p>
+            <p class="description">perfect for chilly days</p>
+            <p class="price">Rp 22.000</p>
+        </div>
+        <button class="add-btn">
+            <i class="lucide-plus"></i>
+        </button>
+    </div>
+</div>
+
+<nav class="bottom-nav">
+    <a class="nav-item" th:href="@{/home}">
+        <i class="lucide-home"></i>
+        <span>Home</span>
+    </a>
+    <a class="nav-item" th:href="@{/drink-menu-others}">
+        <i class="lucide-coffee"></i>
+        <span>Drink Menu</span>
+    </a>
+    <a class="nav-item" th:href="@{/urorder}">
+        <i class="lucide-clipboard-list"></i>
+        <span>Your Order</span>
+    </a>
+    <a class="nav-item active" th:href="@{/favorites}">
+        <i class="lucide-heart"></i>
+        <span>Favorites</span>
+    </a>
+
+</body>
+</html>

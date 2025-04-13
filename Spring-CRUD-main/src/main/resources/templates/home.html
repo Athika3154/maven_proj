@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" th:href="@{/home.css}" />
+    <link href="https://unpkg.com/lucide-static/font/lucide.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="greeting">
+                <p class="subtitle">Good day,</p>
+                <h1>John Smith</h1>
+            </div>
+            <button class="icon-button">
+                <i class="lucide-bell"></i>
+            </button>
+        </header>
+
+        <!-- Best Seller Card -->
+        <div class="best-seller">
+            <div class="content">
+                <p class="label">Best seller of the week</p>
+                <h2>Iced Coffee<br>Sweet Heaven</h2>
+                <button class="more-info">
+                    More info
+                    <i class="lucide-chevron-right"></i>
+                </button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" 
+                 alt="Iced Coffee">
+        </div>
+
+        <!-- Recommendations -->
+        <div class="recommendations">
+            <div class="section-header">
+                <h2>This week's recommendations</h2>
+                <button class="see-all">See all</button>
+            </div>
+            <div class="coffee-grid">
+                <div class="coffee-card">
+                    <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" 
+                         alt="Iced Americano">
+                    <div class="coffee-info">
+                        <h3>Iced Americano</h3>
+                        <p>Rp 20.000</p>
+                    </div>
+                </div>
+                <div class="coffee-card">
+                    <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" 
+                         alt="Hot Cappuccino">
+                    <div class="coffee-info">
+                        <h3>Hot Cappuccino</h3>
+                        <p>Rp 24.000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- What's in the shop -->
+        <div class="shop-section">
+            <h2>What's in the shop?</h2>
+            <div class="promo-card">
+                <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" 
+                     alt="New Lemonade Menu">
+                <div class="promo-content">
+                    <h3>Introducing our<br>new lemonade<br>menu</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="bottom-nav">
+            <a class="nav-item" th:href="@{/home}">
+                <i class="lucide-home"></i>
+                <span>Home</span>
+            </a>
+            <a class="nav-item" th:href="@{/drink-menu-others}">
+                <i class="lucide-coffee"></i>
+                <span>Drink Menu</span>
+            </a>
+            <a class="nav-item" th:href="@{/urorder}">
+                <i class="lucide-clipboard-list"></i>
+                <span>Your Order</span>
+            </a>
+            <a class="nav-item active" th:href="@{/favorites}">
+                <i class="lucide-heart"></i>
+                <span>Favorites</span>
+            </a>
+        </nav>
+        
+        
+    </div>
+</body>
+</html>

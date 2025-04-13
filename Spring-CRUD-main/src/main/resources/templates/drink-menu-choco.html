@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drink Menu - Coffee Shop</title>
+
+    <!-- Thymeleaf CSS Linking -->
+    <link rel="stylesheet" th:href="@{/drink-menu-choco.css}">
+    
+    <!-- Lucide Icons -->
+    <link href="https://unpkg.com/lucide-static/font/lucide.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>What would you like to drink today?</h1>
+            <button class="icon-button">
+                <i class="lucide-bell"></i>
+            </button>
+        </header>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" placeholder="Search.." name="searchQuery">
+        </div>
+
+        <!-- Category Filter -->
+        <div class="category-filter">
+            <a th:href="@{/drink-menu-coffee}" class="category-btn">Coffee</a>
+            <a th:href="@{/drink-menu-choco}" class="category-btn">Chocolate</a>
+            <a th:href="@{/drink-menu-others}" class="category-btn active">Others</a>
+        </div>        
+
+        <!-- Drink List -->
+        <div class="drink-list">
+            <!-- Hot Chocolate -->
+            <div class="drink-item">
+                <img th:src="@{https://images.unsplash.com/photo-1544787219-7f47ccb76574?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80}" 
+                     alt="Hot Chocolate">
+                <div class="drink-info">
+                    <h3>Hot Chocolate</h3>
+                    <p class="description">Sweetened dark chocolate, served hot</p>
+                    <p class="price">Rp 20.000</p>
+                </div>
+                <button class="add-btn">
+                    <i class="lucide-plus"></i>
+                </button>
+            </div>
+
+            <!-- Iced Chocolate -->
+            <div class="drink-item">
+                <img th:src="@{https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80}" 
+                     alt="Iced Chocolate">
+                <div class="drink-info">
+                    <h3>Iced Chocolate</h3>
+                    <p class="description">Sweetened dark chocolate, served cold with whipped cream and stick wafer</p>
+                    <p class="price">Rp 22.000</p>
+                </div>
+                <button class="add-btn">
+                    <i class="lucide-plus"></i>
+                </button>
+            </div>
+
+            <!-- Iced Yin & Yang -->
+            <div class="drink-item">
+                <img th:src="@{https://images.unsplash.com/photo-1544787219-7f47ccb76574?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80}" 
+                     alt="Iced Yin & Yang">
+                <div class="drink-info">
+                    <h3>Iced Yin & Yang</h3>
+                    <p class="description">Dark chocolate and evaporated milk, served cold</p>
+                    <p class="price">Rp 23.000</p>
+                </div>
+                <button class="add-btn">
+                    <i class="lucide-plus"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <a class="nav-item" th:href="@{/home}">
+                <i class="lucide-home"></i>
+                <span>Home</span>
+            </a>
+            <a class="nav-item" th:href="@{/drink-menu-others}">
+                <i class="lucide-coffee"></i>
+                <span>Drink Menu</span>
+            </a>
+            <a class="nav-item" th:href="@{/urorder}">
+                <i class="lucide-clipboard-list"></i>
+                <span>Your Order</span>
+            </a>
+            <a class="nav-item active" th:href="@{/favorites}">
+                <i class="lucide-heart"></i>
+                <span>Favorites</span>
+            </a>
+        </nav>
+    </div>
+</body>
+</html>

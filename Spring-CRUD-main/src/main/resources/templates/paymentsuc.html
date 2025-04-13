@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Success</title>
+    <link rel="stylesheet" href="paymentsuc.css">
+</head>
+<body>
+
+    <div class="overlay">
+        <div class="popup">
+            <h2>Yeay!</h2>
+            <p>Please wait patiently for your drink to arrive at your location</p>
+            <button onclick="closePopup()">Done</button>
+        </div>
+    </div>
+
+    <script>
+        function closePopup() {
+            document.querySelector(".overlay").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>

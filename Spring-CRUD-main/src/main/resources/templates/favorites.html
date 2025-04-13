@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorites</title>
+    <link rel="stylesheet" th:href="@{/favorites.css}">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header>
+    <h2>Your favorite drinks to lighten up your day</h2>
+    <div class="icons">
+        <i class="fas fa-bell"></i>
+        <i class="fas fa-bars"></i>
+    </div>
+</header>
+
+<section class="favorites">
+    <div class="favorite-item">
+        <img th:src="@{/images/iced_coffee_sweet.jpg}" alt="Iced Coffee Sweet Heaven">
+        <div class="favorite-details">
+            <p><strong>Iced Coffee Sweet Heaven</strong></p>
+            <p class="price">Rp 24.000</p>
+        </div>
+        <i class="fas fa-heart favorite-icon"></i>
+    </div>
+
+    <div class="favorite-item">
+        <img th:src="@{/images/iced_chocolate.jpg}" alt="Iced Chocolate">
+        <div class="favorite-details">
+            <p><strong>Iced Chocolate</strong></p>
+            <p class="price">Rp 22.000</p>
+        </div>
+        <i class="fas fa-heart favorite-icon"></i>
+    </div>
+
+    <div class="favorite-item">
+        <img th:src="@{/images/iced_lemonade.jpg}" alt="Iced Lemonade">
+        <div class="favorite-details">
+            <p><strong>Iced Lemonade</strong></p>
+            <p class="price">Rp 18.000</p>
+        </div>
+        <i class="fas fa-heart favorite-icon"></i>
+    </div>
+
+    <div class="favorite-item">
+        <img th:src="@{/images/hot_cappuccino.jpg}" alt="Hot Cappuccino">
+        <div class="favorite-details">
+            <p><strong>Hot Cappuccino</strong></p>
+            <p class="price">Rp 24.000</p>
+        </div>
+        <i class="fas fa-heart favorite-icon"></i>
+    </div>
+
+    <div class="favorite-item">
+        <img th:src="@{/images/iced_coffee_lemonade.jpg}" alt="Iced Coffee Lemonade">
+        <div class="favorite-details">
+            <p><strong>Iced Coffee Lemonade</strong></p>
+            <p class="price">Rp 25.000</p>
+        </div>
+        <i class="fas fa-heart favorite-icon"></i>
+    </div>
+</section>
+
+<!-- Navigation with Thymeleaf routing -->
+<nav class="bottom-nav">
+    <button class="nav-item">
+        <i class="lucide-home"></i>
+        <span><a th:href="@{/home}">Home</a></span>
+    </button>
+    <button class="nav-item">
+        <i class="lucide-coffee"></i>
+        <span><a th:href="@{/drink-menu-others}">Drink Menu</a></span>
+    </button>
+    <button class="nav-item">
+        <i class="lucide-clipboard-list"></i>
+        <span><a th:href="@{/urorder}">Your Order</a></span>
+    </button>
+    <button class="nav-item active">
+        <i class="lucide-heart"></i>
+        <span><a th:href="@{/favorites}">Favorites</a></span>
+    </button>
+</nav>
+
+</body>
+</html>

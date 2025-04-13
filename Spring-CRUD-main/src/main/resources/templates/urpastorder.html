@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Orders</title>
+    <link rel="stylesheet" th:href="@{/urpastorder.css}">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <h2>Your orders</h2>
+        <div class="icons">
+            <i class="fas fa-bell"></i>
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <div class="tab-container">
+        <button class="tab">
+            <a th:href="@{/urorder}">Recently</a>
+        </button>
+        <button class="tab active">Past Orders</button>
+    </div>
+
+    <section class="orders">
+        <!-- Example: Static list (can convert to th:each later for dynamic content) -->
+        <div class="order-item">
+            <img th:src="@{/images/hot_cappuccino.jpg}" alt="Hot Cappuccino">
+            <div class="order-details">
+                <p><strong>1x Hot Cappuccino</strong></p>
+                <p class="details">Details</p>
+            </div>
+            <span class="date">28/01</span>
+        </div>
+
+        <div class="order-item">
+            <img th:src="@{/images/iced_coffee_lemonade.jpg}" alt="Iced Coffee Lemonade">
+            <div class="order-details">
+                <p><strong>2x Iced Coffee Lemonade</strong></p>
+                <p class="details">Details</p>
+            </div>
+            <span class="date">27/01</span>
+        </div>
+
+        <div class="order-item">
+            <img th:src="@{/images/iced_coffee_sweet.jpg}" alt="Iced Coffee Sweet Heaven">
+            <div class="order-details">
+                <p><strong>1x Iced Coffee Sweet Heaven</strong></p>
+                <p class="details">Details</p>
+            </div>
+            <span class="date">25/01</span>
+        </div>
+
+        <div class="order-item">
+            <img th:src="@{/images/iced_chocolate.jpg}" alt="Iced Chocolate">
+            <div class="order-details">
+                <p><strong>1x Iced Chocolate</strong></p>
+                <p class="details">Details</p>
+            </div>
+            <span class="date">24/01</span>
+        </div>
+
+        <div class="order-item">
+            <img th:src="@{/images/iced_mochaccino.jpg}" alt="Iced Mocaccino">
+            <div class="order-details">
+                <p><strong>2x Iced Mocaccino</strong></p>
+                <p class="details">Details</p>
+            </div>
+            <span class="date">22/01</span>
+        </div>
+
+        <div class="order-item">
+            <img th:src="@{/images/iced_coffee_sweet.jpg}" alt="Iced Coffee Sweet Heaven">
+            <div class="order-details">
+                <p><strong>1x Iced Coffee Sweet Heaven</strong></p>
+                <p class="details">Details</p>
+            </div>
+            <span class="date">19/01</span>
+        </div>
+    </section>
+
+    <nav class="bottom-nav">
+        <a th:href="@{/home}"><i class="fas fa-home"></i><br>Home</a>
+        <a th:href="@{/drink-menu-others}"><i class="fas fa-coffee"></i><br>Drink Menu</a>
+        <a th:href="@{/urorder}" class="active"><i class="fas fa-receipt"></i><br>Your Order</a>
+        <a th:href="@{/favorites}"><i class="fas fa-heart"></i><br>Favorites</a>
+    </nav>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Order Payment</title>
+  <link rel="stylesheet" href="payment.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="payment-container">
+    <div class="status-bar">
+      <div class="time">9:41</div>
+      <div class="icons">
+        <div class="signal-icon"><i class="fas fa-signal"></i></div>
+        <div class="battery-icon"><i class="fas fa-battery-full"></i></div>
+      </div>
+    </div>
+
+    <div class="location-section">
+      <div class="cafe-location">
+        <div class="location-icon"><i class="fas fa-location-arrow"></i></div>
+        <div class="location-details">
+          <div class="location-title">Closest cafe:</div>
+          <div class="cafe-name">Co/Choc Tebet (1.5 km)</div>
+          <div class="cafe-address">Jl. Santuy no. 41, Tebet Barat, Tebet, Jakarta Selatan</div>
+        </div>
+      </div>
+      
+      <div class="delivery-location">
+        <div class="location-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <div class="location-details">
+          <div class="location-title">Deliver to:</div>
+          <div class="address">No saved address</div>
+        </div>
+        <div class="edit-btn">Edit</div>
+      </div>
+    </div>
+
+    <div class="order-section">
+      <div class="order-header">
+        <h2>Your order:</h2>
+        <div class="edit-btn">Edit</div>
+      </div>
+      
+      <div class="order-item">
+        <div class="item-quantity">1x</div>
+        <div class="item-name">Iced Coffee Sweet Heaven</div>
+        <div class="item-price">Rp 24.000</div>
+      </div>
+      
+      <div class="recommendations">
+        <div class="recommendation-header">
+          <h3>Other drinks we recommend</h3>
+          <div class="see-all">See all</div>
+        </div>
+        
+        <div class="recommendation-items">
+          <div class="recommendation-item">
+            <div class="item-image">
+              <img src="https://images.unsplash.com/photo-1577968897966-3d4325b36b61?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Iced Yin & Yang">
+              <div class="item-name">Iced Yin & Yang</div>
+              <div class="item-price">Rp 23.000</div>
+            </div>
+          </div>
+          
+          <div class="recommendation-item">
+            <div class="item-image">
+              <img src="https://images.unsplash.com/photo-1621267860478-dbdc14d4428f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Iced Strawberry Lemonade">
+              <div class="item-name">Iced Strawberry Lemonade</div>
+              <div class="item-price">Rp 18.500</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="order-summary">
+        <div class="summary-item">
+          <div class="summary-label">Subtotal</div>
+          <div class="summary-value">Rp 24.000</div>
+        </div>
+        
+        <div class="summary-item">
+          <div class="summary-label">Delivery fee</div>
+          <div class="summary-value">Rp 3.000</div>
+        </div>
+        
+        <div class="summary-item">
+          <div class="summary-label">Packaging fee</div>
+          <div class="summary-value">Rp 5.000</div>
+        </div>
+        
+        <div class="summary-item">
+          <div class="summary-label">Promo</div>
+          <div class="summary-value">Rp 0</div>
+        </div>
+        
+        <div class="summary-item total">
+          <div class="summary-label">TOTAL</div>
+          <div class="summary-value">Rp 32.000</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="payment-method">
+      <div class="wallet-info">
+        <div class="wallet-name">CC-Wallet</div>
+        <div class="wallet-balance">Balance: Rp 90.000</div>
+      </div>
+      <button class="promo-btn">Use Promo</button>
+    </div>
+  </div>
+</body>
+</html>

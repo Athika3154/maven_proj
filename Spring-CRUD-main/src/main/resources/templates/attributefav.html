@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iced Coffee Product Card - Saved to Favorites</title>
+
+  <!-- Local CSS using Thymeleaf -->
+  <link rel="stylesheet" th:href="@{/attributefav.css}">
+  
+  <!-- Font Awesome from CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="product-card">
+    <div class="card-header">
+      <button class="close-btn">
+        <i class="fas fa-times"></i>
+      </button>
+      <button class="favorite-btn active">
+        <i class="fas fa-heart"></i>
+      </button>
+    </div>
+    
+    <div class="product-image">
+      <!-- Use th:src if the image is dynamic, otherwise leave as-is -->
+      <img th:src="@{https://images.unsplash.com/photo-1578314675249-a6910f80cc39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80}" alt="Iced Coffee">
+    </div>
+    
+    <div class="notification-overlay">
+      <div class="notification-box">
+        <p class="notification-text">Saved to Favorites</p>
+        <button class="done-btn">Done</button>
+      </div>
+    </div>
+    
+    <div class="product-info">
+      <h2 class="product-title">Iced Coffee Sweet Heaven</h2>
+      <p class="product-description">Double espresso with condensed milk, served cold</p>
+      <p class="product-price">Rp 24.000</p>
+      
+      <div class="quantity-control">
+        <button class="quantity-btn decrease">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn increase">+</button>
+      </div>
+      
+      <button class="buy-btn">Buy Now</button>
+    </div>
+  </div>
+
+  <!-- JS can remain as-is -->
+  <script>
+    document.querySelector('.done-btn').addEventListener('click', function() {
+      document.querySelector('.notification-overlay').style.display = 'none';
+    });
+  </script>
+</body>
+</html>
